@@ -1,6 +1,8 @@
 import express from 'express';
 import mongoose from 'mongoose';
+import cors from 'cors';
 import dotenv from 'dotenv';
+import exerciseRoutes from './routes/exercises.mjs'
 
 // Load .env file
 dotenv.config()
@@ -10,6 +12,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const MONGODB_CONNECT_STRING = process.env.MONGODB_CONNECT_STRING;
 
+app.use(cors());
 // Parse JSON requests
 app.use(express.json());
 
@@ -28,7 +31,7 @@ db.once('open', () => {
     console.log('Connectedto MongoDB');
 });
 
-app.use('/excercises', excerciseRoutes);
+app.use('/excercises', exerciseRoutes);
 
 // Start express server
 app.listen(PORT, () => {
