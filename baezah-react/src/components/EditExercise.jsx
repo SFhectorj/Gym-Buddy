@@ -74,18 +74,19 @@ function EditExercise() {
                 </div>
                 <div>
                     <label htmlFor="unit">Unit:</label>
-                    <
+                    <select id="unit" value={unit} onChange={(e) => setUnit(e.target.value)} required >
+                        <option value="kgs">kgs</option>
+                        <option value="lbs">lbs</option>
+                    </select>
                 </div>
+                <div>
+                    <label htmlFor="date">Date (MM-DD-YY):</label>
+                    <input type="text" id="date" value={date} onChange={(e) => setDate(e.target.value)} required />
+                </div>
+                <button type="submit">Update</button>
             </form>
         </div>
-    )
-
-
-
-
-
-
-
-
-
+    );
 }
+
+export default EditExercise;

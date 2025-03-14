@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ExerciseTable from './components/ExerciseTable';
 import CreateExercise from './components/CreateExercise';
-
+import EditExercise from './components/EditExercise';
 import './App.css';
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
         <Routes>
           <Route path="/" element={<ExerciseTable />} />
           <Route path="/create" element={<CreateExercise />} />
-
+          <Route path="/edit/:id" element={<EditExercise />} />
         </Routes>
       </main>
       <footer>
