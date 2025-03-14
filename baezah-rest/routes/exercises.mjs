@@ -1,5 +1,18 @@
 import express from 'express'
+import { createExercise } from '../controllers/exerciseController.mjs';
+import { getExerciseById } from '../controllers/exerciseController.mjs';
+import { getExercises } from '../controllers/exerciseController.mjs';
+import { updateExercise } from '../controllers/exerciseController.mjs';
+import { deleteExercise } from '../controllers/exerciseController.mjs';
 
-// This page will define API and connect them to the controller function.
-// SHould import from pages with controller code
-//implement excerciseRoutes
+const router = express.Router();
+
+router.route('/').post(createExercise).get(getExercises);
+router
+    .route('/:_id')
+    .get(getExerciseById)
+    .put(updateExercise)
+    .delete(deleteExercise);
+
+export default router;
+

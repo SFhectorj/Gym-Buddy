@@ -1,5 +1,5 @@
 import React, { useState, useEffect} from 'react';
-import ExerciseRow from '/ExerciseRow';
+import ExerciseRow from './ExerciseRow';
 import { Link } from 'react-router-dom';
 
 function ExerciseTable() {

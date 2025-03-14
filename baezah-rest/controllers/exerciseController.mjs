@@ -13,7 +13,7 @@ function isDateValid(date) {
     return format.test(date);
 }
 
-const createExcercise = asyncHandler(async(req, res) => {
+const createExercise = asyncHandler(async(req, res) => {
     const { name, reps, weight, unit, date } = req.body;
 
     if (
@@ -96,4 +96,4 @@ const deleteExercise = asyncHandler(async (req, res) => {
     }
 });
 
-export { createExcercise, getExerciseById, getExercises, updateExercise,deleteExercise };
+export { createExercise, getExerciseById, getExercises, updateExercise,deleteExercise };

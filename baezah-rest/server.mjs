@@ -2,10 +2,10 @@ import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
 import dotenv from 'dotenv';
-import exerciseRoutes from './routes/exercises.mjs'
+import Routes from './routes/exercises.mjs'
 
 // Load .env file
-dotenv.config()
+dotenv.config();
 
 // Initialize Express: get PORT and connectionstring
 const app = express();
@@ -28,14 +28,14 @@ db.on('error', console.error.bind(console, 'MongoDB connection error:'));
 
 // Show success message
 db.once('open', () => {
-    console.log('Connectedto MongoDB');
+    console.log('Connected to MongoDB');
 });
 
-app.use('/excercises', exerciseRoutes);
+app.use('/excercises', Routes);
 
 // Start express server
 app.listen(PORT, () => {
-    console.log('Server running on port: ${PORT}');
+    console.log(`Server running on port: ${PORT}`);
 });
 
 
