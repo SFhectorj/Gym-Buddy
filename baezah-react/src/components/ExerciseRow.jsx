@@ -12,4 +12,24 @@ function ExerciseRow({ exercise, onDelete }) {
     const handleEdit = () => {
         navigate('/edit/${excercise._id}');
     };
+
+    return (
+        <tr>
+            <td> {exercise.name}</td>
+            <td> {exercise.reps}</td>
+            <td> {exercise.weight}</td>
+            <td> {exercise.unit}</td>
+            <td> {exercise.date}</td>
+            <td>
+                <button onClick={handleEdit} aria-label="Edit">
+                    <FaEdit />
+                </button>
+                <button onClick={() => onDelete(exercise._id)} aria-label="Delete">
+                    <FaTrash />
+                </button>
+            </td>
+        </tr>
+    );
 }
+
+export default ExerciseRow;
