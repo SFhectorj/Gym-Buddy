@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import ExerciseTable from './components/ExerciseTable';
+import CreateExercise from './components/CreateExercise';
+
 import './App.css';
 
 function App() {
@@ -16,6 +18,7 @@ function App() {
       <main>
         <Routes>
           <Route path="/" element={<ExerciseTable />} />
+          <Route path="/create" element={<CreateExercise />} />
 
         </Routes>
       </main>
