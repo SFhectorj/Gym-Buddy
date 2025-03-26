@@ -93,36 +93,6 @@ This application is a Single Page Application (SPA) built using the MERN stack (
 * **DELETE /exercises/:_id:** Delete an exercise by ID.
     * Response: 204 No Content or an error message.
 
-## File Structure
-ExerciseTracker/
-├── backend/
-│   ├── .env
-│   ├── models/
-│   │   └── exercise.mjs
-│   ├── controllers/
-│   │   └── exercises.mjs
-│   ├── server.mjs
-│   ├── package.json
-│   └── package-lock.json
-├── frontend/
-│   ├── src/
-│   │   ├── components/
-│   │   │   ├── ExerciseTable.jsx
-│   │   │   ├── ExerciseRow.jsx
-│   │   │   ├── CreateExercise.jsx
-│   │   │   ├── EditExercise.jsx
-│   │   │   ├── Navigation.jsx
-│   │   ├── App.jsx
-│   │   ├── App.css
-│   │   └── main.jsx
-│   ├── public/
-│   │   └── vite.svg
-│   ├── vite.config.js
-│   ├── index.html
-│   ├── package.json
-│   └── package-lock.json
-└── README.md
-
 ## Considerations
 
 * The backend API uses ES modules and requires node versions that support .mjs files.
